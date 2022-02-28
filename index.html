@@ -341,7 +341,32 @@ if __name__ == "__main__":
 </code></pre>
             </li> 
             <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
-                <pre class="language-js"><code>var i = 45; </code></pre>
+                <pre class="language-python"><code>
+
+	in_room(bananas).
+	in_room(chair).
+	in_room(monkey).
+	dexterous (monkey).
+	tall(chair).
+	can_move(monkey,chair,bananas).
+	can_climb(monkey,chair).
+	can_reach(X,Y):-
+		dexterous(X),
+		close(X,Y).
+	close(X,Z):-
+		get_on(X,Y),
+		under(Y,Z),
+		tall(Y).
+	get_on(X,Y):-
+		can_climb(X,Y).
+	under(Y,Z):-
+		in_room(X),
+		in_room(Y),
+		in_room(Z),
+		can_move(X,Y,Z).
+
+
+ </code></pre>
             </li> 
             <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
                 <pre class="language-js"><code>var i = 45; </code></pre>
